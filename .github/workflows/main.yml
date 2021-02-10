@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-16.04
+    name: Generate chart image
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Pull from current branch
+        run: git pull origin ${GITHUB_REF##*/}
+
+      - name: Create dist folder if note exists
+        run: mkdir -p dist
+
+      - name: generate chart image
+        uses: ./
+        with:
+          url: "https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/5.json"
+          name: chart
+          width: 400
+          height: 400
+
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Add images pulled from headless browser to folder
+          commit_options: '--no-verify --signoff'
+
+      - name: Archive chart image
+        uses: actions/upload-artifact@v2
+        with:
+          name: open-chart
+          path: open-chart.png
+
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v2

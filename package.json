@@ -1,0 +1,38 @@
+{
+    "name": "github-action-charts",
+    "version": "1.0.0",
+    "description": "Automatically provides SVG chart images by input json source",
+    "main": "index.js",
+    "license": "GPL-3.0",
+    "private": true,
+    "scripts": {
+        "prepublish": "node_modules\\.bin\\ncc build index.js -m -o dist",
+        "test": "TZ=utc jest"
+    },
+    "dependencies": {
+        "@actions/core": "^1.2.6",
+        "webshot": "^0.18.0",
+        "webshot-node": "^0.18.2"
+    },
+    "devDependencies": {
+        "@vercel/ncc": "~>0.27.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AlexRogalskiy/github-action-charts.git"
+    },
+    "keywords": [
+        "github-actions",
+        "styled charts",
+        "javascript"
+    ],
+    "bugs": {
+        "url": "https://github.com/AlexRogalskiy/github-action-charts/issues"
+    },
+    "homepage": "https://github.com/AlexRogalskiy/github-action-charts",
+    "author": {
+        "name": "Alexander Rogalskiy",
+        "url": "https://github.com/AlexRogalskiy"
+    },
+    "funding": "https://github.com/sponsors/AlexRogalskiy"
+}
