@@ -55,15 +55,15 @@ Generated graph chart image (stored in the root directory)
 - name: Graph charts
   uses: alexrogalskiy/github-action-charts@master
   with:
+    url: "https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/0.json"
     name: "chart"
-    url: "<json data source url>"
     width: 400
     height: 400
 ```
 
 Running locally:
 
-- `yarn run_action --action github-action-charts --name chart-name --url '<json data source url>' --width 400 --height 400`
+- `yarn run_action --action github-action-charts --url 'https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/0.json' --name chart-name --width 400 --height 400`
 
 [1]: https://github.com/AlexRogalskiy/github-action-charts
 [2]: https://img.shields.io/endpoint?url=https%3A%2F%2Fapi-git-master.endbug.vercel.app%2Fapi%2Fgithub-actions%2Fused-by%3Faction%3DAlexRogalskiy%2Fgithub-action-charts%26badge%3Dtrue
