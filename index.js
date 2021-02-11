@@ -41,5 +41,5 @@ async function run() {
 module.exports = run;
 
 if (require.main === module) {
-  run().then(r => console.log('Done!'));
+  run();
 }
