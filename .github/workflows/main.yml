@@ -30,6 +30,7 @@ jobs:
         with:
           url: "https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/5.json"
           name: "chart"
+          path: "images"
           width: 400
           height: 400
 

@@ -1,5 +1,8 @@
 # Graph charts
 
+[![management: perfekt👌](https://img.shields.io/badge/management-perfekt👌-red.svg)](https://github.com/lekterable/perfekt)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 [![GitHub marketplace](https://img.shields.io/badge/marketplacegithub--charts-blue?logo=github)](https://github.com/marketplace/actions/styled-charts)
 <!-- [![Become a sponsor](https://img.shields.io/badge/sponsor-AlexRogalskiy-181717.svg?logo=github)](https://github.com/sponsors/AlexRogalskiy)-->
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/AlexRogalskiy/github-action-charts)
@@ -17,6 +20,7 @@
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-1f8ceb.svg?style=flat-square)](https://dependabot.com/)
 [![NewReleases](https://newreleases.io/badge.svg)](https://newreleases.io/github/AlexRogalskiy/github-action-charts)
 [![Hits-of-Code](https://hitsofcode.com/github/alexrogalskiy/github-action-charts?branch=master)](https://hitsofcode.com/github/alexrogalskiy/github-action-charts?branch=master/view?branch=master)
+<!--[![codecov](https://codecov.io/gh/AlexRogalskiy/github-action-charts/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexRogalskiy/github-action-charts)-->
 [![ComVer](https://img.shields.io/badge/ComVer-compliant-brightgreen.svg)][1]
 [![Public workflows that use this action.][2]][3]
 [![Licence][4]][5]
@@ -34,6 +38,10 @@ Creates graph charts by input json data source.
 ### `name`
 
 **Optional** Graph chart name (default **demo**)
+
+### `path`
+
+**Optional** Graph chart path (default **images**)
 
 ### `width`
 
@@ -57,13 +65,25 @@ Generated graph chart image (stored in the root directory)
   with:
     url: "https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/0.json"
     name: "chart"
+    path: "images"
     width: 400
     height: 400
 ```
 
 Running locally:
 
-- `yarn run_action --action github-action-charts --url 'https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/0.json' --name chart-name --width 400 --height 400`
+- `yarn run_action --action github-action-charts --url 'https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/0.json' --name chart --path images --width 400 --height 400`
+
+---
+
+- ##### <img src="https://user-images.githubusercontent.com/18126719/56791599-0868f980-683a-11e9-8a8b-134ced040c8e.png" width="30"> _Star-Gazers_
+[![Stargazers repo roster for @AlexRogalskiy/github-action-charts](https://reporoster.com/stars/AlexRogalskiy/github-action-charts)](https://github.com/AlexRogalskiy/github-action-charts/stargazers)
+
+---
+
+- ##### <img src="https://ghost.org/images/docs/setup/fork.gif" width="30"> _Forkers_
+[![Forkers repo roster for @AlexRogalskiy/github-action-charts](https://reporoster.com/forks/AlexRogalskiy/github-action-charts)](https://github.com/AlexRogalskiy/github-action-charts/network/members)
+
 
 [1]: https://github.com/AlexRogalskiy/github-action-charts
 [2]: https://img.shields.io/endpoint?url=https%3A%2F%2Fapi-git-master.endbug.vercel.app%2Fapi%2Fgithub-actions%2Fused-by%3Faction%3DAlexRogalskiy%2Fgithub-action-charts%26badge%3Dtrue

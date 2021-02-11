@@ -2,6 +2,7 @@
 
 const CONFIG = {
   name: 'demo',
+  path: 'demo',
   options: {
     shotSize: {
       width: 1024,

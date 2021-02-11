@@ -10,14 +10,18 @@ inputs:
     description: "graph chart image name"
     required: false
     default: demo
+  path:
+    description: "graph chart image path"
+    required: false
+    default: images
   width:
     description: "graph chart image width"
     required: false
-    default: 1024
+    default: "1024"
   height:
     description: "graph chart image height"
     required: false
-    default: 768
+    default: "768"
 
 outputs:
   images:
