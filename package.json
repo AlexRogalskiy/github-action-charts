@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "format": "prettier --write **/*.js",
-    "format-check": "prettier --check **/*.js",
+    "format:check": "prettier --check **/*.js",
     "prepublish": "node_modules\\.bin\\ncc build index.js -m -o dist",
     "lint": "eslint --fix .",
     "lint:staged": "lint-staged --no-stash --allow-empty",
