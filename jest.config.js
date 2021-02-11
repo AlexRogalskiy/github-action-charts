@@ -7,6 +7,9 @@ module.exports = {
   testMatch: ['**/*.test.js', '**/__tests__/**/?(*.)+(spec|test).js'],
   testRunner: 'jest-circus/runner',
   testPathIgnorePatterns: ['/node_modules/', '/__fixtures__/'],
+  transform: {
+    '^.+\\.js$': 'babel-jest',
+  },
   collectCoverage: true,
   collectCoverageFrom: [
     '!**/dist/**',
