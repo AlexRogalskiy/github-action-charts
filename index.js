@@ -1,15 +1,15 @@
 'use strict';
 
-const core = require("@actions/core");
+const core = require('@actions/core');
 const webshot = require('webshot-node');
 const path = require('path');
 const config = require('./src/config');
 
 async function snap(url, file, options) {
   try {
-    await webshot(url, file, options, (err) => {
-      if (err) throw ( err );
-      console.log("screenshot captured");
+    await webshot(url, file, options, err => {
+      if (err) throw err;
+      console.log('screenshot captured');
     });
   } catch (e) {
     console.error(e);
@@ -17,16 +17,16 @@ async function snap(url, file, options) {
 }
 
 async function run() {
-  const fileName = core.getInput("name") || config.name;
-  const filePath = core.getInput("path") || config.path;
+  const fileName = core.getInput('name') || config.name;
+  const filePath = core.getInput('path') || config.path;
 
-  const source = core.getInput("url");
-  const width = core.getInput("width");
-  const height = core.getInput("height");
+  const source = core.getInput('url');
+  const width = core.getInput('width');
+  const height = core.getInput('height');
 
   const sourceOptions = {
     shotSize: { width, height },
-    windowSize: { width, height }
+    windowSize: { width, height },
   };
 
   const file = path.join(filePath, `${fileName}.png`);
@@ -35,12 +35,11 @@ async function run() {
   const url = `https://styled-charts.vercel.app/api?url=${source}&width=${width}&height=${height}`;
   await snap(url, file, options);
 
-  console.log('Done!');
-  core.setOutput("image", "image downloaded in root directory");
+  core.setOutput('image', 'image downloaded in root directory');
 }
 
 module.exports = run;
 
 if (require.main === module) {
-  run();
+  run().then(r => console.log('Done!'));
 }

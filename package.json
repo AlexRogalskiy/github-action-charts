@@ -9,6 +9,8 @@
         "format": "prettier --write **/*.js",
         "format-check": "prettier --check **/*.js",
         "prepublish": "node_modules\\.bin\\ncc build index.js -m -o dist",
+        "lint": "eslint --fix .",
+        "lint:staged": "lint-staged --no-stash --allow-empty",
         "test": "TZ=utc jest",
         "test:coverage": "jest --collectCoverage",
         "test:watch": "jest --watch"
@@ -20,7 +22,15 @@
     },
     "devDependencies": {
         "@vercel/ncc": "~>0.27.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.19.0",
+        "eslint-config-prettier": "^6.15.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^3.1.4",
         "husky": "^4.2.5",
+        "jest": "^27.0.0-next.2",
+        "jest-circus": "^26.6.3",
         "lint-staged": "^10.1.6",
         "pretty-quick": "^3.1.0"
     },
