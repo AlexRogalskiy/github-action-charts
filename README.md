@@ -1,4 +1,4 @@
-# Graph charts
+# Graph styled charts
 
 [![GitHub marketplace](https://img.shields.io/badge/marketplacegithub--charts-blue?logo=github)](https://github.com/marketplace/actions/styled-charts)
 
