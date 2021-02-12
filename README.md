@@ -15,7 +15,6 @@
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/AlexRogalskiy/github-action-charts)
 ![GitHub repo size](https://img.shields.io/github/repo-size/AlexRogalskiy/github-action-charts)
 ![GitHub last commit](https://img.shields.io/github/last-commit/AlexRogalskiy/github-action-charts)
-![GitHub](https://img.shields.io/github/license/AlexRogalskiy/github-action-charts)
 ![GitHub language count](https://img.shields.io/github/languages/count/AlexRogalskiy/github-action-charts)
 ![GitHub search hit counter](https://img.shields.io/github/search/AlexRogalskiy/github-action-charts/goto)
 ![GitHub Repository branches](https://badgen.net/github/branches/AlexRogalskiy/github-action-charts)
@@ -23,6 +22,7 @@
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-1f8ceb.svg?style=flat-square)](https://dependabot.com/)
 [![NewReleases](https://newreleases.io/badge.svg)](https://newreleases.io/github/AlexRogalskiy/github-action-charts)
 [![Hits-of-Code](https://hitsofcode.com/github/alexrogalskiy/github-action-charts?branch=master)](https://hitsofcode.com/github/alexrogalskiy/github-action-charts?branch=master/view?branch=master)
+![CI](https://github.com/AlexRogalskiy/github-action-charts/workflows/CI/badge.svg)
 
 <!--[![codecov](https://codecov.io/gh/AlexRogalskiy/github-action-charts/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexRogalskiy/github-action-charts)-->
 
@@ -65,7 +65,7 @@ Generated graph chart image (stored in the root directory)
 ## Examples
 
 ```yml
-- name: Graph charts
+- name: Create graph charts
   uses: alexrogalskiy/github-action-charts@master
   with:
     url: 'https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/0.json'
