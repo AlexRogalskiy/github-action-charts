@@ -55,5 +55,8 @@
     "name": "Alexander Rogalskiy",
     "url": "https://github.com/AlexRogalskiy"
   },
+  "browser": {
+    "fs": false
+  },
   "funding": "https://github.com/sponsors/AlexRogalskiy"
 }
