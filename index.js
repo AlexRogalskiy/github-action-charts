@@ -15,6 +15,20 @@ async function createSnapshot(url, file, options) {
     options=${toString(options)}\n`
   );
 
+  url =
+    'https://styled-charts.vercel.app/api?url=https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/0.json';
+  file = 'chart.png';
+  options = {
+    shotSize: {
+      width: 1024,
+      height: 512,
+    },
+    windowSize: {
+      width: 1024,
+      height: 768,
+    },
+  };
+
   try {
     await webshot(url, file, options, () => {
       console.log('screenshot captured');
