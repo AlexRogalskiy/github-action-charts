@@ -29,11 +29,13 @@ async function run() {
     windowSize: { width, height },
   };
 
+  const url = `https://styled-charts.vercel.app/api?url=${source}&width=${width}&height=${height}`;
   // const file = path.join(filePath, `${fileName}.png`);
-  const file = `${fileName}.png`;
+  const file = 'demo';
   const options = { ...config.options, ...sourceOptions };
 
-  const url = `https://styled-charts.vercel.app/api?url=${source}&width=${width}&height=${height}`;
+  console.log(options);
+
   await snap(url, file, options);
 
   core.setOutput('image', 'image downloaded in root directory');
