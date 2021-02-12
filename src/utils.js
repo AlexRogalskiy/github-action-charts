@@ -19,19 +19,23 @@ const notBlankOrElse = (str, defaultValue) => {
   return isBlankString(str) ? defaultValue : str;
 };
 
+const toString = obj => {
+  return '(' + objToString(obj) + ')'
+}
+
 const objToString = obj => {
-  let str = '(';
+  let str = ''
   for (let p in obj) {
     if (obj.hasOwnProperty(p)) {
-      str += p + ' => ' + ( typeof obj[p] === 'object' ? '[' + objToString(obj[p]) + ']' : '<' + obj[p] + '>' );
+      str += p + ' => ' + ( typeof obj[p] === 'object' ? '[' + objToString(obj[p]) + ']' : +obj[p] + ',' )
     }
   }
-  return str + ')';
-};
+  return str;
+}
 
 module.exports = {
   createOptions,
-  objToString,
+  toString,
   isNonEmptyString,
   isBlankString,
   notBlankOrElse,

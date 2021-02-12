@@ -3,6 +3,7 @@
 const CONFIG = {
   name: 'chart',
   path: 'images',
+  timeout: 5000,
   options: {
     shotSize: {
       width: 1024,

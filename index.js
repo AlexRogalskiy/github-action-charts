@@ -5,14 +5,14 @@ const webshot = require('webshot-node');
 const path = require('path');
 
 const config = require('./src/config');
-const { notBlankOrElse, createOptions, objToString } = require('./src/utils');
+const { notBlankOrElse, createOptions, toString } = require('./src/utils');
 
 async function createSnapshot(url, file, options) {
   console.log(
     `Generating screenshot with parameters:
     url=${url},
     name=${file},
-    options=${objToString(options)}\n`
+    options=${toString(options)}\n`
   );
 
   try {
@@ -36,7 +36,7 @@ async function run() {
   const file = path.join(filePath, `${fileName}.png`);
   const options = { ...createOptions(width, height), ...config.options };
 
-  await createSnapshot(target, file, options);
+  await createSnapshot(target, `${fileName}.png`, options);
 
   core.setOutput('image', 'image downloaded in root directory');
 }
