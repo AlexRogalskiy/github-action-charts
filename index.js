@@ -29,7 +29,8 @@ async function run() {
     windowSize: { width, height },
   };
 
-  const file = path.join(filePath, `${fileName}.png`);
+  // const file = path.join(filePath, `${fileName}.png`);
+  const file = `${fileName}.png`;
   const options = { ...config.options, ...sourceOptions };
 
   const url = `https://styled-charts.vercel.app/api?url=${source}&width=${width}&height=${height}`;
