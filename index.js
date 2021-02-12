@@ -32,7 +32,7 @@ async function run() {
   const fileName = notBlankOrElse(core.getInput('name'), config.name);
   const filePath = notBlankOrElse(core.getInput('path'), config.path);
 
-  const target = `https://styled-charts.vercel.app/api?url=${url}&width=${width}&height=${height}`;
+  const target = `https://styled-charts.vercel.app/api?url=${url}`;
   const file = path.join(filePath, `${fileName}.png`);
   const options = { ...createOptions(width, height), ...config.options };
 
