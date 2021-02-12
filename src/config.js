@@ -1,8 +1,8 @@
 'use strict';
 
 const CONFIG = {
-  name: 'demo',
-  path: 'demo',
+  name: 'chart',
+  path: 'images',
   options: {
     shotSize: {
       width: 1024,

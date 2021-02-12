@@ -23,7 +23,7 @@ const objToString = obj => {
   let str = '';
   for (let p in obj) {
     if (obj.hasOwnProperty(p)) {
-      str += p + ' => ' + (typeof obj[p] === 'object' ? objToString(obj[p]) : obj[p] + ', ');
+      str += p + ' => ' + (typeof obj[p] === 'object' ? '[' + objToString(obj[p]) + ']' : obj[p] + ', ');
     }
   }
   return str;
