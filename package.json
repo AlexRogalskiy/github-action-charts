@@ -9,7 +9,7 @@
     "format": "prettier --write **/*.js",
     "format:check": "prettier --check **/*.js",
     "prepublish": "node_modules\\.bin\\ncc build index.js -m -o dist",
-    "action": "npm run prepublish && node dist/index.js",
+    "start:action": "npm run prepublish && node dist/index.js",
     "lint": "eslint --fix .",
     "lint:staged": "lint-staged --no-stash --allow-empty",
     "test": "TZ=utc jest",

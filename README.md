@@ -77,7 +77,7 @@ Generated graph chart image (stored in the root directory)
 
 Running locally:
 
-- `npm start:action --action github-action-charts --url 'https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/0.json' --name chart-name --width 400 --height 400`
+- `npm run start:action --action github-action-charts --url 'https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/0.json' --name chart-name --width 400 --height 400`
 
 ## <img src="https://user-images.githubusercontent.com/18126719/56791599-0868f980-683a-11e9-8a8b-134ced040c8e.png" width="30" height="30"> _Star Gazers_
 
