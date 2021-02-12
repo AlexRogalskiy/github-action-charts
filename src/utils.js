@@ -2,8 +2,8 @@
 
 const createOptions = (width, height) => {
   return {
-    shotSize: { width: width, height: height },
-    windowSize: { width: width, height: height },
+    shotSize: { width, height },
+    windowSize: { width, height },
   };
 };
 
@@ -20,18 +20,18 @@ const notBlankOrElse = (str, defaultValue) => {
 };
 
 const toString = obj => {
-  return '(' + objToString(obj) + ')'
-}
+  return `(${objToString(obj)})`;
+};
 
 const objToString = obj => {
-  let str = ''
-  for (let p in obj) {
-    if (obj.hasOwnProperty(p)) {
-      str += p + ' => ' + ( typeof obj[p] === 'object' ? '[' + objToString(obj[p]) + ']' : +obj[p] + ',' )
+  let str = '';
+  for (const p in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, p)) {
+      str += `${p} => ${typeof obj[p] === 'object' ? `[${objToString(obj[p])}]` : `${+obj[p]},`}`;
     }
   }
   return str;
-}
+};
 
 module.exports = {
   createOptions,

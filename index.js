@@ -1,7 +1,7 @@
 'use strict';
 
 const core = require('@actions/core');
-const webshot = require('webshot-node');
+const webshot = require('webshot');
 const path = require('path');
 
 const config = require('./src/config');
@@ -16,7 +16,8 @@ async function createSnapshot(url, file, options) {
   );
 
   try {
-    await webshot(url, file, options, () => {
+    await webshot(url, file, options, e => {
+      if (e) throw e;
       console.log('screenshot captured');
     });
   } catch (e) {
