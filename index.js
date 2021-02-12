@@ -32,18 +32,7 @@ async function run() {
   const url = `https://styled-charts.vercel.app/api?url=${source}&width=${width}&height=${height}`;
   // const file = path.join(filePath, `${fileName}.png`);
   const file = 'demo.png';
-  // const options = { ...config.options, ...sourceOptions };
-
-  const options = {
-    shotSize: {
-      width: 1024,
-      height: 512,
-    },
-    windowSize: {
-      width: 1024,
-      height: 768,
-    },
-  };
+  const options = { ...config.options, ...sourceOptions };
 
   await snap(url, file, options);
 
