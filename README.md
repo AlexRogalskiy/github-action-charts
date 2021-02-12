@@ -1,6 +1,6 @@
 # Graph styled charts
 
-[![GitHub marketplace](https://img.shields.io/badge/marketplacegithub--charts-blue?logo=github)](https://github.com/marketplace/actions/styled-charts)
+[![GitHub marketplace](https://img.shields.io/badge/marketplacegithub--graph-charts-blue?logo=github)](https://github.com/marketplace/actions/graph-charts)
 
 [![management: perfekt👌](https://img.shields.io/badge/management-perfekt👌-red.svg)](https://github.com/lekterable/perfekt)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
