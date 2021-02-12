@@ -14,6 +14,10 @@ inputs:
     description: 'graph chart image path'
     required: false
     default: images
+  extension:
+    description: 'graph chart image extension'
+    required: false
+    default: svg
   width:
     description: 'graph chart image width'
     required: false

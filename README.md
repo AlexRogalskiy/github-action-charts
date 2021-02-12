@@ -42,11 +42,15 @@ Creates graph charts by input json data source and dimension parameters.
 
 ### `name`
 
-**Optional** Graph chart name (default **demo**)
+**Optional** Graph chart image name (default **demo**)
 
 ### `path`
 
-**Optional** Graph chart path (default **images**)
+**Optional** Graph chart image path (default **images**)
+
+### `extension`
+
+**Optional** Graph chart image extension (default **svg**)
 
 ### `width`
 
@@ -71,13 +75,14 @@ Generated graph chart image (stored in the root directory)
     url: 'https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/0.json'
     name: 'chart'
     path: 'images'
+    extension: 'svg'
     width: 400
     height: 400
 ```
 
 Running locally:
 
-- `npm run start:action --action github-action-charts --url 'https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/0.json' --name chart-name --width 400 --height 400`
+- `npm run start:action --action github-action-charts --url 'https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/0.json' --name chart-name --extension svg --width 400 --height 400`
 
 ## <img src="https://user-images.githubusercontent.com/18126719/56791599-0868f980-683a-11e9-8a8b-134ced040c8e.png" width="30" height="30"> _Star Gazers_
 
