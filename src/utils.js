@@ -19,7 +19,7 @@ const notBlankOrElse = (str, defaultValue) => {
   return isBlankString(str) ? defaultValue : str;
 };
 
-const toString = obj => {
+const toFormatString = obj => {
   return `(${objToString(obj)})`;
 };
 
@@ -35,7 +35,7 @@ const objToString = obj => {
 
 module.exports = {
   createOptions,
-  toString,
+  toString: toFormatString,
   isNonEmptyString,
   isBlankString,
   notBlankOrElse,
