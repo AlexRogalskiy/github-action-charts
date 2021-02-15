@@ -2,26 +2,27 @@
 
 const core = require('@actions/core');
 const path = require('path');
+const http = require('https');
+const fs = require('fs');
 
 const config = require('./src/config');
 const { notBlankOrElse } = require('./src/utils');
 
-const http = require('https');
-const fs = require('fs');
-
-async function createSnapshot(url, filePath, fileName) {
+async function createSnapshot(url, filePath, fileName, fileExtension) {
   try {
-    const file = path.join(filePath, fileName);
-    console.log(`Generating screenshot with parameters: url=${url}, file=${file}\n`);
+    const imagePath = path.join(filePath, `${fileName}.${fileExtension}`);
+    console.log(`Generating screenshot with parameters: url=${url}, file=${imagePath}\n`);
 
     if (!fs.existsSync(filePath)) {
       fs.mkdirSync(filePath);
     }
 
-    const image = fs.createWriteStream(file);
+    const image = fs.createWriteStream(imagePath);
     await http.get(url, resp => {
       resp.pipe(image);
     });
+
+    return imagePath;
   } catch (e) {
     console.error(e);
   }
@@ -32,14 +33,15 @@ async function run() {
   const width = notBlankOrElse(core.getInput('width'), config.width);
   const height = notBlankOrElse(core.getInput('height'), config.height);
 
-  const target = `${config.url}?url=${url}&width=${width}&height=${height}`;
   const fileName = notBlankOrElse(core.getInput('name'), config.name);
   const filePath = notBlankOrElse(core.getInput('path'), config.path);
   const fileExtension = notBlankOrElse(core.getInput('extension'), config.extension);
 
-  await createSnapshot(target, filePath, `${fileName}.${fileExtension}`);
+  const target = `${config.url}?url=${url}&width=${width}&height=${height}`;
 
-  core.setOutput('image', 'image downloaded in root directory');
+  const imagePath = await createSnapshot(target, filePath, fileName, fileExtension);
+
+  core.setOutput('image', imagePath);
 }
 
 module.exports = run;
