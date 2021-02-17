@@ -9,15 +9,15 @@ inputs:
   name:
     description: 'graph chart image name'
     required: false
-    default: demo
+    default: 'demo'
   path:
     description: 'graph chart image path'
     required: false
-    default: images
+    default: 'images'
   extension:
     description: 'graph chart image extension'
     required: false
-    default: svg
+    default: 'svg'
   width:
     description: 'graph chart image width'
     required: false
