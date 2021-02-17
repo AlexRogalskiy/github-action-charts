@@ -104,7 +104,7 @@ Creates graph charts by input json data source and dimension parameters.
 
 ### `image`
 
-Generated graph chart image (stored in the root directory)
+Generated graph chart image (stored in the `path` directory)
 
 ## _Examples_
 
