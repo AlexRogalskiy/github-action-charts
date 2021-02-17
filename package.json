@@ -1,7 +1,7 @@
 {
   "name": "github-action-charts",
   "version": "1.0.0",
-  "description": "Automatically provides SVG chart images by input json source",
+  "description": "Automatically provides SVG (Scalable Vector Graphics) chart images by input json source",
   "main": "index.js",
   "license": "GPL-3.0",
   "private": true,
