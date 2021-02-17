@@ -1,6 +1,6 @@
 # _Styled charts_
 
-[![GitHub marketplace](https://img.shields.io/badge/marketplacegithub--graph-charts-blue?logo=github)](https://github.com/marketplace/actions/graph-charts)
+[![GitHub marketplace](https://img.shields.io/badge/marketplacegithub-graph--charts-blue?logo=github)](https://github.com/marketplace/actions/graph-charts)
 
 [![management: perfekt👌](https://img.shields.io/badge/management-perfekt👌-red.svg)](https://github.com/lekterable/perfekt)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
@@ -59,7 +59,7 @@
 
 <p align="center" style="text-align:center;">
     <a href="https://www.typescriptlang.org/">
-        <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
+        <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
     </a>
     <a href="https://www.repostatus.org/#active">
         <img src="https://img.shields.io/badge/Project%20Status-Active-brightgreen" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed." />
