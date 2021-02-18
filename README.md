@@ -19,6 +19,7 @@
 ![GitHub search hit counter](https://img.shields.io/github/search/AlexRogalskiy/github-action-charts/goto)
 ![GitHub Repository branches](https://badgen.net/github/branches/AlexRogalskiy/github-action-charts)
 ![GitHub Repository dependents](https://badgen.net/github/dependents-repo/AlexRogalskiy/github-action-charts)
+[![Renovatebot](https://badgen.net/badge/renovate/enabled/green?cache=300)](https://renovatebot.com/)
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-1f8ceb.svg?style=flat-square)](https://dependabot.com/)
 [![NewReleases](https://newreleases.io/badge.svg)](https://newreleases.io/github/AlexRogalskiy/github-action-charts)
 [![Hits-of-Code](https://hitsofcode.com/github/alexrogalskiy/github-action-charts?branch=master)](https://hitsofcode.com/github/alexrogalskiy/github-action-charts?branch=master/view?branch=master)
@@ -34,26 +35,14 @@
 ## _Table of contents_
 
 <!--ts-->
-   * [<em>Styled charts</em>](#styled-charts)
-      * [<em>Table of contents</em>](#table-of-contents)
-      * [<em>Description</em>](#description)
-      * [<em>Inputs</em>](#inputs)
-         * [url](#url)
-         * [name](#name)
-         * [path](#path)
-         * [extension](#extension)
-         * [width](#width)
-         * [height](#height)
-      * [<em>Outputs</em>](#outputs)
-         * [image](#image)
-      * [<em>Examples</em>](#examples)
-      * [<em>Visitor stats</em>](#visitor-stats)
-      * [<em>Licensing</em>](#licensing)
-      * [<em>Authors</em>](#authors)
-      * [<em>Versioning</em>](#versioning)
-      * [<em>Contribution</em>](#contribution)
-      * [<em>Acknowledgement</em>](#acknowledgement)
-      * [<em>Forks</em>](#forks)
+
+- [<em>Styled charts</em>](#styled-charts) _ [<em>Table of contents</em>](#table-of-contents) _
+[<em>Description</em>](#description) _ [<em>Inputs</em>](#inputs) _ [url](#url) _ [name](#name) _
+[path](#path) _ [extension](#extension) _ [width](#width) _ [height](#height) _ [<em>Outputs</em>](#outputs) _
+[image](#image) _ [<em>Examples</em>](#examples) _ [<em>Visitor stats</em>](#visitor-stats) _
+[<em>Licensing</em>](#licensing) _ [<em>Authors</em>](#authors) _ [<em>Versioning</em>](#versioning) _
+[<em>Contribution</em>](#contribution) _ [<em>Acknowledgement</em>](#acknowledgement) \*
+[<em>Forks</em>](#forks)
 <!--te-->
 
 ## _Description_
@@ -160,9 +149,11 @@ this repository][tags].
 
 Please read
 [CONTRIBUTING.md](https://github.com/AlexRogalskiy/github-action-charts/blob/master/.github/CONTRIBUTING.md)
-for details on our code of conduct, and the process for submitting pull requests to us ([emoji key](https://allcontributors.org/docs/en/emoji-key)).
+for details on our code of conduct, and the process for submitting pull requests to us
+([emoji key](https://allcontributors.org/docs/en/emoji-key)).
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors)
+specification. Contributions of any kind are welcome!
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 ![Github contributors](https://img.shields.io/github/all-contributors/AlexRogalskiy/github-action-charts)
