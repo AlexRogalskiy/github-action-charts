@@ -28,6 +28,7 @@
 
 <!--[![codecov](https://codecov.io/gh/AlexRogalskiy/github-action-charts/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexRogalskiy/github-action-charts)-->
 
+[![GitHub Super-Linter](https://github.com/AlexRogalskiy/github-action-charts/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 [![ComVer](https://img.shields.io/badge/ComVer-compliant-brightgreen.svg)][repo]
 [![Public workflows that use this action.][total_usages]][search_results]
 [![Licence][license_id]][license_content]
@@ -35,27 +36,14 @@
 ## _Table of contents_
 
 <!--ts-->
-   * [<em>Styled charts</em>](#styled-charts)
-      * [<em>Table of contents</em>](#table-of-contents)
-      * [<em>Description</em>](#description)
-      * [<em>Inputs</em>](#inputs)
-         * [url](#url)
-         * [name](#name)
-         * [path](#path)
-         * [extension](#extension)
-         * [width](#width)
-         * [height](#height)
-      * [<em>Outputs</em>](#outputs)
-         * [image](#image)
-      * [<em>Examples</em>](#examples)
-      * [<em>Visitor stats</em>](#visitor-stats)
-      * [<em>Licensing</em>](#licensing)
-      * [<em>Authors</em>](#authors)
-      * [<em>Versioning</em>](#versioning)
-      * [<em>Contribution</em>](#contribution)
-      * [<em>Acknowledgement</em>](#acknowledgement)
-      * [<em>Forks</em>](#forks)
-      * [<em>Development Support</em>](#development-support)
+
+- [<em>Styled charts</em>](#styled-charts) _ [<em>Table of contents</em>](#table-of-contents) _
+[<em>Description</em>](#description) _ [<em>Inputs</em>](#inputs) _ [url](#url) _ [name](#name) _
+[path](#path) _ [extension](#extension) _ [width](#width) _ [height](#height) _ [<em>Outputs</em>](#outputs) _
+[image](#image) _ [<em>Examples</em>](#examples) _ [<em>Visitor stats</em>](#visitor-stats) _
+[<em>Licensing</em>](#licensing) _ [<em>Authors</em>](#authors) _ [<em>Versioning</em>](#versioning) _
+[<em>Contribution</em>](#contribution) _ [<em>Acknowledgement</em>](#acknowledgement) _
+[<em>Forks</em>](#forks) _ [<em>Development Support</em>](#development-support)
 <!--te-->
 
 ## _Description_
@@ -194,7 +182,6 @@ Like _**Styled Charts**_ ? Consider buying me a coffee :\)
 [![forthebadge](https://img.shields.io/badge/made%20with-%20javascript-C1282D.svg?logo=javascript&style=for-the-badge)](https://www.javascript.com/)
 [![forthebadge](https://img.shields.io/badge/powered%20by-%20github-7116FB.svg?logo=github&style=for-the-badge)](https://github.com/)
 [![forthebadge](https://img.shields.io/badge/build%20with-%20%E2%9D%A4-B6FF9B.svg?logo=heart&style=for-the-badge)](https://forthebadge.com/)
-
 
 [repo]: https://github.com/AlexRogalskiy/github-action-charts
 [tags]: https://github.com/AlexRogalskiy/github-action-charts/tags
