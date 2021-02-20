@@ -9,27 +9,23 @@ const config = require('./src/config');
 const { notBlankOrElse } = require('./src/utils');
 
 async function createSnapshot(url, filePath, fileName, fileExtension) {
-  try {
-    const imagePath = path.join(filePath, `${fileName}.${fileExtension}`);
-    console.log(`Generating screenshot with parameters: url=${url}, file=${imagePath}\n`);
+  const imagePath = path.join(filePath, `${fileName}.${fileExtension}`);
+  console.log(`Generating screenshot with parameters: url=${url}, file=${imagePath}\n`);
 
-    if (!fs.existsSync(filePath)) {
-      fs.mkdirSync(filePath);
-    }
-
-    const image = fs.createWriteStream(imagePath);
-    await http.get(url, resp => {
-      resp.pipe(image);
-    });
-
-    return imagePath;
-  } catch (e) {
-    console.error(e);
+  if (!fs.existsSync(filePath)) {
+    fs.mkdirSync(filePath);
   }
+
+  const image = fs.createWriteStream(imagePath);
+  await http.get(url, resp => {
+    resp.pipe(image);
+  });
+
+  return imagePath;
 }
 
 async function run() {
-  const url = core.getInput('url');
+  const url = core.getInput('url', { required: true });
   const width = notBlankOrElse(core.getInput('width'), config.width);
   const height = notBlankOrElse(core.getInput('height'), config.height);
 
@@ -39,9 +35,13 @@ async function run() {
 
   const target = `${config.url}?url=${url}&width=${width}&height=${height}`;
 
-  const imagePath = await createSnapshot(target, filePath, fileName, fileExtension);
-
-  core.setOutput('image', imagePath);
+  try {
+    const imagePath = await createSnapshot(target, filePath, fileName, fileExtension);
+    core.info(`Storing chart image by path: ${imagePath}`);
+    core.setOutput('image', imagePath);
+  } catch (e) {
+    core.setFailed(`Cannot create chart image by path: ${filePath}/${fileName}, message: ${e.message}`);
+  }
 }
 
 module.exports = run;
