@@ -1,5 +1,7 @@
 # _Styled charts_
 
+> GitHub Action to generate styled charts
+
 [![GitHub marketplace](https://img.shields.io/badge/marketplacegithub-graph--charts-blue?logo=github)](https://github.com/marketplace/actions/graph-charts)
 
 [![management: perfekt👌](https://img.shields.io/badge/management-perfekt👌-red.svg)](https://github.com/lekterable/perfekt)
