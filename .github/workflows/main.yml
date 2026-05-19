@@ -41,7 +41,7 @@ jobs:
           commit_options: '--no-verify --signoff'
 
       - name: Archive chart image
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: open-chart
           path: open-chart.png
